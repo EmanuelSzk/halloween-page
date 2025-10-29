@@ -1,7 +1,7 @@
 <?php
 
     include "Conexion/conexion.php";
-
+    $votosUsuario = [];
 ?>
 
 <!DOCTYPE html>
@@ -43,11 +43,14 @@
                     <ul>
                         <li>Descripcion: ". $row["descripcion"] ."</li>
                         <li>Cantidad de votos: ". $row["votos"] ."</li>
-                    </ul>";
+                    </ul>
+                    <form action='Scripts/votar.php' method='POST'>
+                        <input type='hidden' name='id' value=". $row["id"] .">
+                        <button type='submit'>Votar</button>
+                    </form>";
                     } } else {
                     echo "<h3>no hay disfraces disponibles, lo sentimos mucho</h3>";
                 };
-                desconectar();
                 ?>
             </ul>
         </main>
