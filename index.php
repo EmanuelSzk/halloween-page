@@ -15,7 +15,10 @@ $q = mysqli_query($con, "SELECT * FROM disfraces WHERE eliminado=0");
 
 <body>
     <header>
-        <h1>🎃 Concurso de Disfraces</h1>
+        <div class="titulo">
+            <img src="sources/calabaza.png" class="decoracion">
+            <h1>Concurso de Disfraces</h1>
+        </div>
         <nav>
             <a href="index.php">Inicio</a>
             <?php
@@ -33,6 +36,17 @@ $q = mysqli_query($con, "SELECT * FROM disfraces WHERE eliminado=0");
     </header>
 
     <main>
+
+        <?php
+        if (isset($_SESSION['usuario'])) {
+            if (isset($_SESSION['nombre']) && $_SESSION['nombre'] != 'admin') {
+                echo ' <div class="consejo">
+            <p>Para acceder a las caracteristicas del admin (CRUD) debe crearse un usuario "admin"</p>
+        </div>';
+            };
+        }
+        ?>
+
         <?php while ($r = mysqli_fetch_assoc($q)): ?>
             <div class="disfraz">
                 <?php if (!empty($r['foto']) && file_exists("fotos/" . $r['foto'])): ?>
