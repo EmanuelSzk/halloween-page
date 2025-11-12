@@ -1,0 +1,68 @@
+body {
+  background-color: #1a1a1a;
+  color: #ffa500;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: #000;
+  padding: 15px;
+  border-bottom: 2px solid orange;
+}
+
+nav a {
+  color: #ffa500;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px #ff6600;
+}
+
+main {
+  padding: 20px;
+}
+
+.disfraz {
+  background: #222;
+  border: 2px solid orange;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+}
+
+.disfraz img { 
+  width: 200px;
+  height: 200px;
+}
+
+button {
+  background: #ffa500;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ff6600;
+}
+
+footer {
+  background: #000;
+  padding: 10px;
+  border-top: 2px solid orange;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #ffa500;
+}
